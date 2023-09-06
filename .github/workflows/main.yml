@@ -3,24 +3,24 @@ name: Deploy to Staging
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   deploy_to_staging:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Copy Code to Staging
+      - name: Copy Code to Dev
         run: |
           # Switch to the staging branch
-          git checkout staging
+          git checkout Dev
 
           # Copy all files from the dev branch to the staging branch
           git checkout main -- .
 
           # Commit the changes
           git add .
-          git commit -m "Copy code from main to staging"
+          git commit -m "Copy code from main to Dev"
 
           # Push the changes to the staging branch
-          git push origin staging
+          git push origin Dev
