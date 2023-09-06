@@ -15,7 +15,7 @@ jobs:
           # Switch to the staging branch
           git checkout Dev
 
-          # Copy all files from the dev branch to the staging branch
+          # Copy all files from the dev branch to the Dev branch
           git checkout main -- .
 
           # Commit the changes
